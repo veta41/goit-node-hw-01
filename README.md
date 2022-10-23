@@ -1,4 +1,5 @@
-# goit-node-hw-01
+
+Contacts-cli
 
 # Получаем и выводим весь список контактов в виде таблицы (console.table)
 node index.js --action list
@@ -7,20 +8,20 @@ https://monosnap.com/file/cX6pilsLKYo1MtkfUyTmWlplwMEJ1p
 
 
 
-# Получаем контакт по id
+# Получаем контакт по id в виде таблицы (console.table)
 node index.js --action get --id 5
 
 https://monosnap.com/file/LIzIIvORLTQQ8g6cnvxihTdYtemaFi
 
 
 
-# Добавялем контакт
+# Добавялем контакт в виде таблицы (console.table)
 node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22
 
 https://monosnap.com/file/WYcHuGXAVA1GTU4RhsfFM9RE6PkvgX
 
 
-# Удаляем контакт
+# Удаляем контакт в виде таблицы (console.table)
 node index.js --action remove --id=3
 
 https://monosnap.com/list/63551b0be989db5af4d75f06
