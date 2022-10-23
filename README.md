@@ -1,3 +1,7 @@
+# Contacts CLI
+
+
+
 # Получаем и выводим весь список контактов в виде таблицы (console.table)
 node index.js --action list
 
