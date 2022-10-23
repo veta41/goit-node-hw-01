@@ -1,13 +1,12 @@
-const { Command } = require("commander");
-const program = new Command();
-
-
 const {
-  listContact,
+  listContacts,
   getContactById,
   removeContact,
   addContact,
 } = require("./contacts");
+
+const { Command } = require("commander");
+const program = new Command();
 
 program
   .option("-a, --action <type>", "choose action")
@@ -20,11 +19,10 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// TODO: рефакторить
-function invokeAction({ action, id, name, email, phone }) {
+async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
-      const contacts = await listContact();
+      const contacts = await listContacts();
       console.table(contacts);
       break;
 
@@ -34,13 +32,13 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "add":
-      await addContact(name, email, phone);
-      const contact = console.table(contact);
+      const contact = await addContact(name, email, phone);
+      console.table(contact);
       break;
 
     case "remove":
-      await removeContact(id);
-      
+      const contactRemove = await removeContact(id);
+      console.table(contactRemove);
       break;
 
     default:
