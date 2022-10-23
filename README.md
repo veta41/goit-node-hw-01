@@ -24,4 +24,4 @@ https://monosnap.com/file/WYcHuGXAVA1GTU4RhsfFM9RE6PkvgX
 # Удаляем контакт в виде таблицы (console.table)
 node index.js --action remove --id=3
 
-https://monosnap.com/list/63551b0be989db5af4d75f06
+https://monosnap.com/file/5BnZCXsMhfzRHSU9OCJsEyzxOGA8JK
