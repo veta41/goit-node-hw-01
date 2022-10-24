@@ -36,15 +36,9 @@ async function getContactById(contactId) {
 
 async function removeContact(contactId) {
   try {
-    const contact = getContactById(contactId);
-
-    if (!contact) {
-      return null;
-    }
-
     const contacts = await readContact();
     const id = contacts.findIndex(({ id }) => id.toString() === contactId);
-    if (id === -1) return;
+    if (id === -1) return null;
     const update = contacts.splice(id, 1);
     await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
     return update;
